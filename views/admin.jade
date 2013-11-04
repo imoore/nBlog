@@ -1,0 +1,14 @@
+extends admin_layout
+
+block content
+      .row
+        .col-sm-6.col-md-4.col-md-offset-4
+            h1.text-center.login-title Sign in to My Blog
+            .account-wall
+                img.profile-img(src='https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120', alt='')
+                form.form-signin(action='/backend/admin/signin', method='post')
+                    input.form-control(type='text', name='user', placeholder='User Name', required='required', autofocus='autofocus')
+                    input.form-control(type='password', name='passwd', placeholder='Password', required='required')
+                    button.btn.btn-lg.btn-primary.btn-block(type='submit')
+                        | Sign in
+                    span.clearfix
